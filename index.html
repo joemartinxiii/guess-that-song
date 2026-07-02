@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess That Song</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="patriot-bg" aria-hidden="true">
+    <div class="patriot-stars"></div>
+    <div class="patriot-stripes"></div>
+  </div>
+
+  <div class="app">
+    <header class="header">
+      <p class="header-kicker">🇺🇸 4th of July · 2026</p>
+      <h1 class="title">Guess That Song</h1>
+      <p class="progress" id="progress" aria-live="polite">Loading…</p>
+      <div id="dev-tools" class="dev-tools hidden" aria-label="Song testing controls"></div>
+    </header>
+
+    <main class="main">
+      <div class="play-intro">
+        <button type="button" class="btn btn-ghost btn-new-game" id="new-game-btn">New game</button>
+      </div>
+
+      <section class="card play-card" id="play-card">
+        <p class="hint-text" id="hint-text">Tap a hint to play a snippet. Shout your guess!</p>
+
+        <div class="hints" role="group" aria-label="Song hints">
+          <button type="button" class="btn btn-hint" id="hint-0" data-hint="0">
+            <span class="btn-label">Hint 1</span>
+            <span class="btn-sub" id="hint-0-status">Not played</span>
+          </button>
+          <button type="button" class="btn btn-hint" id="hint-1" data-hint="1">
+            <span class="btn-label">Hint 2</span>
+            <span class="btn-sub" id="hint-1-status">Not played</span>
+          </button>
+          <button type="button" class="btn btn-hint" id="hint-2" data-hint="2">
+            <span class="btn-label">Hint 3</span>
+            <span class="btn-sub" id="hint-2-status">Not played</span>
+          </button>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn btn-primary" id="reveal-btn" disabled>Reveal answer</button>
+        </div>
+      </section>
+
+      <section class="card reveal-card hidden" id="reveal-card" aria-live="polite">
+        <div class="reveal-content">
+          <img class="album-art" id="album-art" src="" alt="" width="280" height="280">
+          <div class="reveal-details">
+            <h2 class="song-title" id="song-title"></h2>
+            <p class="song-artist" id="song-artist"></p>
+            <p class="song-year" id="song-year"></p>
+            <div class="fun-fact-wrap">
+              <p class="fun-fact-label">Fun fact</p>
+              <p class="fun-fact" id="fun-fact"></p>
+            </div>
+          </div>
+        </div>
+        <div class="actions reveal-actions">
+          <button type="button" class="btn btn-secondary" id="play-full-btn">Play full song</button>
+          <button type="button" class="btn btn-primary" id="next-btn">Next song</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
+
+  <audio id="audio-player" preload="auto"></audio>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hint Tuner — Guess That Song</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/hint-tuner.css">
+</head>
+<body>
+  <div class="app tuner-app">
+    <header class="header tuner-header">
+      <h1 class="title">Hint Tuner</h1>
+      <p class="tuner-server-warn hidden" id="server-warn">
+        Save is disabled — stop <code>python3 -m http.server</code> and run
+        <code>python3 scripts/hint-tuner-server.py</code> instead.
+      </p>
+      <p class="progress tuner-subtitle">Drag empty waveform to scrub · release to play · drag colored regions for hints · <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> preview</p>
+    </header>
+
+    <main class="tuner-main">
+      <div class="tuner-toolbar card">
+        <div class="tuner-nav">
+          <button type="button" class="btn btn-ghost dev-nav-btn" id="prev-song" aria-label="Previous song">←</button>
+          <select id="song-select" class="dev-song-select" aria-label="Select song"></select>
+          <button type="button" class="btn btn-ghost dev-nav-btn" id="next-song" aria-label="Next song">→</button>
+        </div>
+        <div class="tuner-actions">
+          <span class="save-status" id="save-status">Ready</span>
+          <button type="button" class="btn btn-primary" id="save-btn">Save song</button>
+          <button type="button" class="btn btn-ghost" id="save-next-btn">Save &amp; next</button>
+        </div>
+      </div>
+
+      <div class="card tuner-wave-card">
+        <div class="tuner-transport">
+          <button type="button" class="btn btn-ghost" id="play-btn">Play</button>
+          <span class="tuner-time" id="playhead-label">0:00</span>
+          <span class="tuner-duration" id="duration-label">/ 0:00</span>
+        </div>
+        <div class="wave-wrap" id="wave-wrap">
+          <canvas id="wave-canvas" height="120" aria-label="Waveform with hint regions"></canvas>
+          <div class="wave-loading hidden" id="wave-loading">Loading audio…</div>
+        </div>
+        <div class="wave-legend">
+          <span class="legend-item legend-h1">Hint 1</span>
+          <span class="legend-item legend-h2">Hint 2</span>
+          <span class="legend-item legend-h3">Hint 3</span>
+        </div>
+      </div>
+
+      <div class="hint-panels">
+        <section class="card hint-panel hint-panel-0" data-hint="0">
+          <h2 class="hint-panel-title">Hint 1</h2>
+          <div class="hint-fields">
+            <label>Start <input type="text" class="hint-input hint-start" data-hint="0" placeholder="0:00"></label>
+            <label>End <input type="text" class="hint-input hint-end" data-hint="0" placeholder="0:15"></label>
+            <label>Duration <input type="number" class="hint-input hint-dur" data-hint="0" min="1" max="120" step="1"></label>
+          </div>
+          <button type="button" class="btn btn-ghost btn-set-start" data-hint="0">Set start to playhead</button>
+          <button type="button" class="btn btn-hint preview-btn" data-hint="0">Preview hint 1</button>
+        </section>
+        <section class="card hint-panel hint-panel-1" data-hint="1">
+          <h2 class="hint-panel-title">Hint 2</h2>
+          <div class="hint-fields">
+            <label>Start <input type="text" class="hint-input hint-start" data-hint="1" placeholder="0:00"></label>
+            <label>End <input type="text" class="hint-input hint-end" data-hint="1" placeholder="0:15"></label>
+            <label>Duration <input type="number" class="hint-input hint-dur" data-hint="1" min="1" max="120" step="1"></label>
+          </div>
+          <button type="button" class="btn btn-ghost btn-set-start" data-hint="1">Set start to playhead</button>
+          <button type="button" class="btn btn-hint preview-btn" data-hint="1">Preview hint 2</button>
+        </section>
+        <section class="card hint-panel hint-panel-2" data-hint="2">
+          <h2 class="hint-panel-title">Hint 3</h2>
+          <div class="hint-fields">
+            <label>Start <input type="text" class="hint-input hint-start" data-hint="2" placeholder="0:00"></label>
+            <label>End <input type="text" class="hint-input hint-end" data-hint="2" placeholder="0:15"></label>
+            <label>Duration <input type="number" class="hint-input hint-dur" data-hint="2" min="1" max="120" step="1"></label>
+          </div>
+          <button type="button" class="btn btn-ghost btn-set-start" data-hint="2">Set start to playhead</button>
+          <button type="button" class="btn btn-hint preview-btn" data-hint="2">Preview hint 3</button>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer tuner-footer">
+      <p>Run <code>python3 scripts/hint-tuner-server.py</code> so Save writes to <code>playlist.json</code> and <code>song-hints-data.py</code>.</p>
+      <a class="btn btn-ghost" href="index.html">Back to game</a>
+    </footer>
+  </div>
+
+  <div class="toast hidden" id="toast" role="status"></div>
+  <audio id="audio-scrub" preload="auto"></audio>
+
+  <script type="module" src="js/hint-tuner.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3358"/>
+      <stop offset="100%" style="stop-color:#0f2140"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <circle cx="200" cy="180" r="70" fill="none" stroke="#5c7cba" stroke-width="4"/>
+  <circle cx="200" cy="180" r="20" fill="#c41e3a"/>
+  <rect x="130" y="260" width="140" height="8" rx="4" fill="#3d5a80"/>
+  <text x="200" y="320" text-anchor="middle" fill="#a8b8d0" font-family="system-ui,sans-serif" font-size="18">Album Art</text>
+</svg>

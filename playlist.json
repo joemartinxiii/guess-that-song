@@ -1,0 +1,1487 @@
+[
+  {
+    "id": "song-01",
+    "title": "Too Tight",
+    "artist": "Con Funk Shun",
+    "year": 1978,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/50/9d/66/509d66e0-df81-72b8-c3ba-f870b0abca97/22UMGIM23261.rgb.jpg/600x600bb.jpg",
+    "funFact": "Con Funk Shun's biggest crossover hit \u2014 the title is about a relationship that's 'too tight' to walk away from.",
+    "audio": "clips/song-01.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 210,
+        "duration": 15,
+        "label": "3:30 mark"
+      },
+      {
+        "start": 95,
+        "duration": 22,
+        "label": "1:35\u20131:55"
+      }
+    ]
+  },
+  {
+    "id": "song-02",
+    "title": "Ffun",
+    "artist": "Con Funk Shun",
+    "year": 1977,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/03/34/24/03342408-ed32-113e-de86-d5d2ffd83419/06UMGIM20214.rgb.jpg/600x600bb.jpg",
+    "funFact": "The title is spelled F-F-U-N on the record \u2014 extra letters for extra funk.",
+    "audio": "clips/song-02.mp3",
+    "hints": [
+      {
+        "start": 18,
+        "duration": 15,
+        "label": "instrumental groove"
+      },
+      {
+        "start": 70,
+        "duration": 10,
+        "label": "1:10\u20131:20"
+      },
+      {
+        "start": 53,
+        "duration": 17,
+        "label": "0:53\u20131:10"
+      }
+    ]
+  },
+  {
+    "id": "song-03",
+    "title": "Brick House",
+    "artist": "Commodores",
+    "year": 1977,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ae/9c/17/ae9c1700-324c-5599-071a-dc64f6b637ff/15UMGIM15842.rgb.jpg/600x600bb.jpg",
+    "funFact": "The Commodores' Walter Orange sings the iconic bass-heavy hook on this 1977 smash.",
+    "audio": "clips/song-03.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 48,
+        "duration": 17,
+        "label": "0:48\u20131:05"
+      },
+      {
+        "start": 138,
+        "duration": 20,
+        "label": "2:18\u20132:38"
+      }
+    ]
+  },
+  {
+    "id": "song-04",
+    "title": "Let It Whip",
+    "artist": "Dazz Band",
+    "year": 1982,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/bb/4b/7a/bb4b7ad7-01e1-9717-7dfa-051f4ff22663/00731455677126.rgb.jpg/600x600bb.jpg",
+    "funFact": "Dazz Band won a Grammy for this 1982 synth-funk jam \u2014 whip-cracks included.",
+    "audio": "clips/song-04.mp3",
+    "hints": [
+      {
+        "start": 2,
+        "duration": 18,
+        "label": "0:02\u20130:20"
+      },
+      {
+        "start": 140,
+        "duration": 17,
+        "label": "2:20\u20132:37"
+      },
+      {
+        "start": 167,
+        "duration": 15,
+        "label": "2:47\u20133:02"
+      }
+    ]
+  },
+  {
+    "id": "song-05",
+    "title": "Reach For It",
+    "artist": "George Duke",
+    "year": 1977,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c4/fc/41/c4fc412b-f040-dfd3-cad4-64ac179de37f/886443397767.jpg/600x600bb.jpg",
+    "funFact": "George Duke's 1977 instrumental became a breakbeat favorite for DJs and producers.",
+    "audio": "clips/song-05.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 10,
+        "label": "0:00\u20130:10"
+      },
+      {
+        "start": 109,
+        "duration": 22,
+        "label": "1:49\u20132:11"
+      },
+      {
+        "start": 239,
+        "duration": 20,
+        "label": "3:59\u20134:19"
+      }
+    ]
+  },
+  {
+    "id": "song-06",
+    "title": "Back Together Again",
+    "artist": "Roberta Flack & Donny Hathaway",
+    "year": 1979,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/9d/66/7d/9d667dae-0f67-5b75-6264-bfe1aeef7480/dj.xusfjyyd.jpg/600x600bb.jpg",
+    "funFact": "Roberta Flack and Donny Hathaway's final duet before his tragic death in 1979.",
+    "audio": "clips/song-06.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 63,
+        "duration": 17,
+        "label": "1:03\u20131:20"
+      },
+      {
+        "start": 190,
+        "duration": 18,
+        "label": "3:10\u20133:28"
+      }
+    ]
+  },
+  {
+    "id": "song-07",
+    "title": "Respect",
+    "artist": "Aretha Franklin",
+    "year": 1967,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d1/31/ee/d131eec4-614c-d661-b580-3dc32b8547e8/603497896622.jpg/600x600bb.jpg",
+    "funFact": "Aretha flipped Otis Redding's song into a feminist anthem \u2014 and spelled R-E-S-P-E-C-T out loud.",
+    "audio": "clips/song-07.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 10,
+        "label": "0:00\u20130:10"
+      },
+      {
+        "start": 65,
+        "duration": 14,
+        "label": "1:05\u20131:19"
+      },
+      {
+        "start": 110,
+        "duration": 18,
+        "label": "1:50\u20132:08"
+      }
+    ]
+  },
+  {
+    "id": "song-08",
+    "title": "Ain't Nobody",
+    "artist": "Chaka Khan",
+    "year": 1983,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/13/55/fb/1355fbb0-60f1-d15e-12cb-ad0008b99524/mzi.zqdpvvdq.jpg/600x600bb.jpg",
+    "funFact": "Chaka Khan recorded this with Rufus in one take at a Montreux Jazz Festival soundcheck.",
+    "audio": "clips/song-08.mp3",
+    "hints": [
+      {
+        "start": 2,
+        "duration": 13,
+        "label": "0:02\u20130:15"
+      },
+      {
+        "start": 55,
+        "duration": 16,
+        "label": "0:55\u20131:11"
+      },
+      {
+        "start": 122,
+        "duration": 19,
+        "label": "2:02\u20132:21"
+      }
+    ]
+  },
+  {
+    "id": "song-09",
+    "title": "Boogie Wonderland",
+    "artist": "Earth, Wind & Fire",
+    "year": 1979,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/600x600bb.jpg",
+    "funFact": "Earth, Wind & Fire teamed with The Emotions for this disco-funk floor-filler.",
+    "audio": "clips/song-09.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 168,
+        "duration": 15,
+        "label": "2:48\u20133:03"
+      },
+      {
+        "start": 232,
+        "duration": 21,
+        "label": "3:52\u20134:13"
+      }
+    ]
+  },
+  {
+    "id": "song-10",
+    "title": "Word Up",
+    "artist": "Cameo",
+    "year": 1986,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/d0/75/0d/d0750dcb-9c62-49ef-41ad-45b026901667/06UMGIM21181.rgb.jpg/600x600bb.jpg",
+    "funFact": "Cameo's codpiece era peaked here \u2014 Larry Blackmon's 'ow!' became instant party vocabulary.",
+    "audio": "clips/song-10.mp3",
+    "hints": [
+      {
+        "start": 16,
+        "duration": 16,
+        "label": "0:16\u20130:32"
+      },
+      {
+        "start": 58,
+        "duration": 15,
+        "label": "0:58\u20131:13"
+      },
+      {
+        "start": 115,
+        "duration": 19,
+        "label": "1:55\u20132:14"
+      }
+    ]
+  },
+  {
+    "id": "song-11",
+    "title": "Shining Star",
+    "artist": "Earth, Wind & Fire",
+    "year": 1975,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/1d/86/bc/1d86bc2d-1007-3b47-2652-f4a58fb0eaa0/dj.amgioild.jpg/600x600bb.jpg",
+    "funFact": "Earth, Wind & Fire wrote this after watching a documentary about the stars in the sky.",
+    "audio": "clips/song-11.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 13,
+        "label": "0:00\u20130:13"
+      },
+      {
+        "start": 61,
+        "duration": 14,
+        "label": "1:01\u20131:15"
+      },
+      {
+        "start": 129,
+        "duration": 18,
+        "label": "2:09\u20132:27"
+      }
+    ]
+  },
+  {
+    "id": "song-12",
+    "title": "Before I Let Go",
+    "artist": "Maze",
+    "year": 1981,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/81/07/9f/81079fd8-5f8b-5790-68a7-a441f1cb3401/14ULAIM00333.rgb.jpg/600x600bb.jpg",
+    "funFact": "Frankie Beverly's live version is the cookout anthem \u2014 Maze made it a wedding reception staple.",
+    "audio": "clips/song-12.mp3",
+    "hints": [
+      {
+        "start": 11,
+        "duration": 15,
+        "label": "instrumental groove"
+      },
+      {
+        "start": 67,
+        "duration": 15,
+        "label": "1:07\u20131:22"
+      },
+      {
+        "start": 116,
+        "duration": 22,
+        "label": "1:56\u20132:18"
+      }
+    ]
+  },
+  {
+    "id": "song-13",
+    "title": "Joy & Pain",
+    "artist": "Maze",
+    "year": 1980,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f5/bc/a1/f5bca1e8-fa45-f409-c276-d2ad07016a0d/00724359727752.jpg/600x600bb.jpg",
+    "funFact": "Maze's signature call-and-response: life is a mix of both, and the crowd always answers.",
+    "audio": "clips/song-13.mp3",
+    "hints": [
+      {
+        "start": 40,
+        "duration": 15,
+        "label": "instrumental groove"
+      },
+      {
+        "start": 169,
+        "duration": 15,
+        "label": "2:49\u20133:04"
+      },
+      {
+        "start": 292,
+        "duration": 18,
+        "label": "4:52\u20135:10"
+      }
+    ]
+  },
+  {
+    "id": "song-14",
+    "title": "What's Going On",
+    "artist": "Marvin Gaye",
+    "year": 1971,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/76/36/2d/76362d74-cb7a-8ef9-104e-cde1d858e9a9/20UMGIM95279.rgb.jpg/600x600bb.jpg",
+    "funFact": "Marvin Gaye wrote this after his brother returned from Vietnam \u2014 a protest song that still grooves.",
+    "audio": "clips/song-14.mp3",
+    "hints": [
+      {
+        "start": 7,
+        "duration": 12,
+        "label": "0:07\u20130:19"
+      },
+      {
+        "start": 69,
+        "duration": 15,
+        "label": "1:09\u20131:24"
+      },
+      {
+        "start": 163,
+        "duration": 18,
+        "label": "2:43\u20133:01"
+      }
+    ]
+  },
+  {
+    "id": "song-15",
+    "title": "Skin Tight",
+    "artist": "Ohio Players",
+    "year": 1974,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/7f/15/c9/7f15c9ed-c165-2e65-981f-028c65d4c539/00602547996275.rgb.jpg/600x600bb.jpg",
+    "funFact": "Ohio Players' suggestive album covers were almost as famous as the funk inside.",
+    "audio": "clips/song-15.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 180,
+        "duration": 20,
+        "label": "3:00\u20133:20"
+      },
+      {
+        "start": 138,
+        "duration": 18,
+        "label": "2:18\u20132:36"
+      }
+    ]
+  },
+  {
+    "id": "song-16",
+    "title": "Live It Up",
+    "artist": "The Isley Brothers",
+    "year": 1978,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d3/83/39/d38339ae-1020-aa0b-d6c8-727c17984325/886445446630.jpg/600x600bb.jpg",
+    "funFact": "The Isley Brothers' 1978 hit \u2014 Ronald Isley's falsetto over that talk-box still slaps.",
+    "audio": "clips/song-16.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 70,
+        "duration": 15,
+        "label": "1:10\u20131:25"
+      },
+      {
+        "start": 154,
+        "duration": 20,
+        "label": "2:34\u20132:54"
+      }
+    ]
+  },
+  {
+    "id": "song-17",
+    "title": "You Dropped a Bomb on Me",
+    "artist": "The Gap Band",
+    "year": 1982,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/fa/ea/dd/faeadd17-1a37-54a0-caff-5a7e2c71c789/06UMGIM06524.rgb.jpg/600x600bb.jpg",
+    "funFact": "The Gap Band from Tulsa, Oklahoma \u2014 not the clothing store, but just as explosive.",
+    "audio": "clips/song-17.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 81,
+        "duration": 15,
+        "label": "1:21\u20131:36"
+      },
+      {
+        "start": 188,
+        "duration": 18,
+        "label": "3:08\u20133:26"
+      }
+    ]
+  },
+  {
+    "id": "song-18",
+    "title": "Super Freak",
+    "artist": "Rick James",
+    "year": 1981,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/5f/e4/43/5fe4433e-a9ef-ccd6-4220-86dfa5e34a61/00602527921600.rgb.jpg/600x600bb.jpg",
+    "funFact": "Rick James wrote this in about an hour \u2014 MC Hammer later built 'U Can't Touch This' on the bass line.",
+    "audio": "clips/song-18.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 10,
+        "label": "0:00\u20130:10"
+      },
+      {
+        "start": 108,
+        "duration": 15,
+        "label": "1:48\u20132:03"
+      },
+      {
+        "start": 153,
+        "duration": 19,
+        "label": "2:33\u20132:52"
+      }
+    ]
+  },
+  {
+    "id": "song-19",
+    "title": "Mary Jane",
+    "artist": "Rick James",
+    "year": 1983,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/22/60/6c/22606cd1-40fc-3b1e-fbb0-65dcf102bf08/06UMGIM02155.rgb.jpg/600x600bb.jpg",
+    "funFact": "Rick James' ode to his favorite\u2026 herb. The crowd always knows what Mary Jane means.",
+    "audio": "clips/song-19.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 97,
+        "duration": 17,
+        "label": "1:37\u20131:54"
+      },
+      {
+        "start": 120,
+        "duration": 18,
+        "label": "2:00\u20132:18"
+      }
+    ]
+  },
+  {
+    "id": "song-20",
+    "title": "I Got You (I Feel Good)",
+    "artist": "James Brown",
+    "year": 1965,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/8a/76/04/8a760498-ce95-c1f3-4bff-958362821728/14UMGIM28794.rgb.jpg/600x600bb.jpg",
+    "funFact": "James Brown recorded the definitive version live \u2014 one of the most sampled shouts in history.",
+    "audio": "clips/song-20.mp3",
+    "hints": [
+      {
+        "start": 47,
+        "duration": 15,
+        "label": "instrumental groove"
+      },
+      {
+        "start": 78,
+        "duration": 14,
+        "label": "1:18\u20131:32"
+      },
+      {
+        "start": 0,
+        "duration": 22,
+        "label": "0:00\u20130:22"
+      }
+    ]
+  },
+  {
+    "id": "song-21",
+    "title": "Fantastic Voyage",
+    "artist": "Lakeside",
+    "year": 1980,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/fa/df/ca/fadfca82-3a19-d53e-bfd5-965e1cf46915/dj.rzkosujk.jpg/600x600bb.jpg",
+    "funFact": "Lakeside's 1980 hit shares its name with a sci-fi movie \u2014 the groove is the real trip.",
+    "audio": "clips/song-21.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 67,
+        "duration": 17,
+        "label": "1:07\u20131:24"
+      },
+      {
+        "start": 92,
+        "duration": 18,
+        "label": "1:32\u20131:50"
+      }
+    ]
+  },
+  {
+    "id": "song-22",
+    "title": "Raid",
+    "artist": "Lakeside",
+    "year": 1983,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music/47/55/0d/mzi.kmteqkta.jpg/600x600bb.jpg",
+    "funFact": "Lakeside's slow-burn funk epic \u2014 the 'raid' is a heartbreak, not a police bust.",
+    "audio": "clips/song-22.mp3",
+    "hints": [
+      {
+        "start": 93,
+        "duration": 15,
+        "label": "instrumental groove"
+      },
+      {
+        "start": 198,
+        "duration": 15,
+        "label": "3:18\u20133:33"
+      },
+      {
+        "start": 286,
+        "duration": 18,
+        "label": "4:46\u20135:04"
+      }
+    ]
+  },
+  {
+    "id": "song-23",
+    "title": "More Bounce to the Ounce",
+    "artist": "Zapp",
+    "year": 1980,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music/6f/19/f7/mzi.uqegmknd.jpg/600x600bb.jpg",
+    "funFact": "Zapp & Roger Troutman's talk-box made this 1980 track a West Coast funk blueprint.",
+    "audio": "clips/song-23.mp3",
+    "hints": [
+      {
+        "start": 79,
+        "duration": 15,
+        "label": "instrumental groove"
+      },
+      {
+        "start": 143,
+        "duration": 18,
+        "label": "2:23\u20132:41"
+      },
+      {
+        "start": 182,
+        "duration": 18,
+        "label": "3:02\u20133:20"
+      }
+    ]
+  },
+  {
+    "id": "song-24",
+    "title": "We Are Family",
+    "artist": "Sister Sledge",
+    "year": 1979,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/17/01/5b/17015ba4-993c-8de9-5d0c-750e5d2bf32e/mzi.cbherewl.jpg/600x600bb.jpg",
+    "funFact": "Sister Sledge recorded this in one day \u2014 it became the anthem of the 1979 Pittsburgh Pirates.",
+    "audio": "clips/song-24.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 11,
+        "label": "0:00\u20130:11"
+      },
+      {
+        "start": 69,
+        "duration": 19,
+        "label": "1:09\u20131:28"
+      },
+      {
+        "start": 152,
+        "duration": 22,
+        "label": "2:32\u20132:54"
+      }
+    ]
+  },
+  {
+    "id": "song-25",
+    "title": "Square Biz",
+    "artist": "Teena Marie",
+    "year": 1981,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1c/65/9f/1c659f4a-e452-4e8b-242a-db117dc068fc/00044006498829.rgb.jpg/600x600bb.jpg",
+    "funFact": "Teena Marie rapped on this 1981 track years before rap crossed over to pop radio.",
+    "audio": "clips/song-25.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 179,
+        "duration": 15,
+        "label": "2:59\u20133:14"
+      },
+      {
+        "start": 151,
+        "duration": 18,
+        "label": "2:31\u20132:49"
+      }
+    ]
+  },
+  {
+    "id": "song-26",
+    "title": "Flash Light",
+    "artist": "Parliament",
+    "year": 1978,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/15/68/31/15683110-5d60-1a2a-e196-18be48cf5c30/00602567825920.rgb.jpg/600x600bb.jpg",
+    "funFact": "Parliament's George Clinton and Bootsy Collins \u2014 the mothership landed on the dance floor.",
+    "audio": "clips/song-26.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 72,
+        "duration": 17,
+        "label": "1:12\u20131:29"
+      },
+      {
+        "start": 117,
+        "duration": 18,
+        "label": "1:57\u20132:15"
+      }
+    ]
+  },
+  {
+    "id": "song-27",
+    "title": "I'd Rather Be With You",
+    "artist": "Bootsy Collins",
+    "year": 1976,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b2/1f/90/b21f90a0-c828-920a-1c09-456bddef846b/842474154915.jpg/600x600bb.jpg",
+    "funFact": "Bootsy Collins' 1976 slow jam \u2014 Bootsy's star-shaped bass and shades are legendary.",
+    "audio": "clips/song-27.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 127,
+        "duration": 15,
+        "label": "2:07\u20132:22"
+      },
+      {
+        "start": 150,
+        "duration": 18,
+        "label": "2:30\u20132:48"
+      }
+    ]
+  },
+  {
+    "id": "song-28",
+    "title": "Celebration",
+    "artist": "Kool & The Gang",
+    "year": 1980,
+    "category": "OLD SKOOL R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/48/c9/c3/48c9c3a6-35e7-fd96-f3c8-80956c70e6ca/00602567825494.rgb.jpg/600x600bb.jpg",
+    "funFact": "Kool & The Gang wrote this after reading about a global celebration in a magazine.",
+    "audio": "clips/song-28.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 9,
+        "label": "0:00\u20130:09"
+      },
+      {
+        "start": 54,
+        "duration": 11,
+        "label": "0:54\u20131:05"
+      },
+      {
+        "start": 99,
+        "duration": 18,
+        "label": "1:39\u20131:57"
+      }
+    ]
+  },
+  {
+    "id": "song-29",
+    "title": "Lowdown",
+    "artist": "Boz Scaggs",
+    "year": 1976,
+    "category": "SOFT ROCK",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/b2/3b/7d/b23b7d36-c61d-d207-a3bd-670466ed9dd1/dj.fcmnjull.jpg/600x600bb.jpg",
+    "funFact": "Boz Scaggs' Silk Degrees album \u2014 David Paich and Jeff Porcaro played on it before forming Toto.",
+    "audio": "clips/song-29.mp3",
+    "hints": [
+      {
+        "start": 10,
+        "duration": 15,
+        "label": "instrumental groove"
+      },
+      {
+        "start": 122,
+        "duration": 21,
+        "label": "2:02\u20132:23"
+      },
+      {
+        "start": 225,
+        "duration": 18,
+        "label": "3:45\u20134:03"
+      }
+    ]
+  },
+  {
+    "id": "song-30",
+    "title": "Cut the Cake",
+    "artist": "Average White Band",
+    "year": 1975,
+    "category": "SOFT ROCK",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/18/02/b4/1802b49b-ad05-976e-0ab2-1d1d6c8a540e/040232365706_cover.jpg/600x600bb.jpg",
+    "funFact": "Average White Band's horn section on this 1975 cut is pure Scottish soul \u2014 seriously.",
+    "audio": "clips/song-30.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 140,
+        "duration": 15,
+        "label": "2:20\u20132:35"
+      },
+      {
+        "start": 163,
+        "duration": 18,
+        "label": "2:43\u20133:01"
+      }
+    ]
+  },
+  {
+    "id": "song-31",
+    "title": "Play That Funky Music",
+    "artist": "Wild Cherry",
+    "year": 1976,
+    "category": "SOFT ROCK",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/af/f6/0c/aff60ca6-7385-e47d-7681-e5f73910665c/mzi.fjlfxpyy.jpg/600x600bb.jpg",
+    "funFact": "Wild Cherry's one hit was born when a club patron yelled 'play that funky music, white boy!'",
+    "audio": "clips/song-31.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 118,
+        "duration": 15,
+        "label": "1:58\u20132:13"
+      },
+      {
+        "start": 211,
+        "duration": 19,
+        "label": "3:31\u20133:50"
+      }
+    ]
+  },
+  {
+    "id": "song-32",
+    "title": "Fame",
+    "artist": "David Bowie",
+    "year": 1975,
+    "category": "SOFT ROCK",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0a/a7/0c/0aa70c09-e325-3900-6a5e-1557ff7ce710/190295990329.jpg/600x600bb.jpg",
+    "funFact": "David Bowie co-wrote this with John Lennon \u2014 a gritty NYC anthem from the Young Americans sessions.",
+    "audio": "clips/song-32.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 162,
+        "duration": 15,
+        "label": "2:42\u20132:57"
+      },
+      {
+        "start": 185,
+        "duration": 18,
+        "label": "3:05\u20133:23"
+      }
+    ]
+  },
+  {
+    "id": "song-33",
+    "title": "The Cisco Kid",
+    "artist": "War",
+    "year": 1972,
+    "category": "SOFT ROCK",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/71/53/a5/7153a580-e4cd-2e60-769b-3a0fdf8667f9/5059460109902.jpg/600x600bb.jpg",
+    "funFact": "War's 1972 story-song about an outlaw \u2014 Low Rider's band keeping the funk west coast.",
+    "audio": "clips/song-33.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 77,
+        "duration": 20,
+        "label": "1:17\u20131:37"
+      },
+      {
+        "start": 180,
+        "duration": 22,
+        "label": "3:00\u20133:22"
+      }
+    ]
+  },
+  {
+    "id": "song-34",
+    "title": "Minute by Minute",
+    "artist": "The Doobie Brothers",
+    "year": 1978,
+    "category": "SOFT ROCK",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music20/v4/94/ce/ec/94ceec93-4b13-36cb-d72a-ba9e9d65ceec/603497877720.jpg/600x600bb.jpg",
+    "funFact": "The Doobie Brothers went full blue-eyed soul \u2014 Michael McDonald's voice defined the era.",
+    "audio": "clips/song-34.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 85,
+        "duration": 16,
+        "label": "1:25\u20131:41"
+      },
+      {
+        "start": 157,
+        "duration": 22,
+        "label": "2:37\u20132:59"
+      }
+    ]
+  },
+  {
+    "id": "song-35",
+    "title": "Bennie and the Jets",
+    "artist": "Elton John",
+    "year": 1973,
+    "category": "SOFT ROCK",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/dc/02/ee/dc02ee4a-ff56-75df-64d4-9afcf8c0885d/18UMGIM35649.rgb.jpg/600x600bb.jpg",
+    "funFact": "Elton John's glam-rock oddity \u2014 the fake live crowd noise was added in the studio.",
+    "audio": "clips/song-35.mp3",
+    "hints": [
+      {
+        "start": 7,
+        "duration": 15,
+        "label": "0:07\u20130:22"
+      },
+      {
+        "start": 125,
+        "duration": 17,
+        "label": "2:05\u20132:22"
+      },
+      {
+        "start": 192,
+        "duration": 27,
+        "label": "3:12\u20133:39"
+      }
+    ]
+  },
+  {
+    "id": "song-36",
+    "title": "Don't Go Breaking My Heart",
+    "artist": "Elton John",
+    "year": 1976,
+    "category": "SOFT ROCK",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f9/91/95/f991955f-ff92-1cc7-9279-ca1d81824d93/00731452816320.rgb.jpg/600x600bb.jpg",
+    "funFact": "Elton John and Kiki Dee's 1976 duet \u2014 they recorded it in one afternoon.",
+    "audio": "clips/song-36.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 8,
+        "label": "0:00\u20130:08"
+      },
+      {
+        "start": 50,
+        "duration": 15,
+        "label": "0:50\u20131:05"
+      },
+      {
+        "start": 155,
+        "duration": 18,
+        "label": "2:35\u20132:53"
+      }
+    ]
+  },
+  {
+    "id": "song-37",
+    "title": "Babylon Sisters",
+    "artist": "Steely Dan",
+    "year": 1980,
+    "category": "SOFT ROCK",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/49/2e/26/492e2633-9199-0b8e-6642-e2d4a5f08a93/23UM1IM00406.rgb.jpg/600x600bb.jpg",
+    "funFact": "Steely Dan's Gaucho album took two years and nearly broke the band \u2014 this track was worth it.",
+    "audio": "clips/song-37.mp3",
+    "hints": [
+      {
+        "start": 2,
+        "duration": 15,
+        "label": "0:02\u20130:17"
+      },
+      {
+        "start": 205,
+        "duration": 17,
+        "label": "3:25\u20133:42"
+      },
+      {
+        "start": 160,
+        "duration": 28,
+        "label": "2:40\u20133:08"
+      }
+    ]
+  },
+  {
+    "id": "song-38",
+    "title": "Faith",
+    "artist": "George Michael",
+    "year": 1987,
+    "category": "SOFT ROCK",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/47/55/0c/47550cd6-7ef5-bf86-c194-c7695d63c759/dj.xuditatj.jpg/600x600bb.jpg",
+    "funFact": "George Michael's 1987 solo debut sold 25 million copies \u2014 the leather jacket era began here.",
+    "audio": "clips/song-38.mp3",
+    "hints": [
+      {
+        "start": 11,
+        "duration": 15,
+        "label": "0:11\u20130:26"
+      },
+      {
+        "start": 87,
+        "duration": 15,
+        "label": "1:27\u20131:42"
+      },
+      {
+        "start": 119,
+        "duration": 18,
+        "label": "1:59\u20132:17"
+      }
+    ]
+  },
+  {
+    "id": "song-39",
+    "title": "Get Ready",
+    "artist": "Rare Earth",
+    "year": 1970,
+    "category": "SOFT ROCK",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/0f/85/1f/0f851f52-f7bc-0023-3601-d6af3b4afd56/00602547215161.rgb.jpg/600x600bb.jpg",
+    "funFact": "Rare Earth stretched this Smokey Robinson cover to 21 minutes live \u2014 the crowd never left.",
+    "audio": "clips/song-39.mp3",
+    "hints": [
+      {
+        "start": 2,
+        "duration": 13,
+        "label": "0:02\u20130:15"
+      },
+      {
+        "start": 23,
+        "duration": 15,
+        "label": "0:23\u20130:38"
+      },
+      {
+        "start": 89,
+        "duration": 18,
+        "label": "1:29\u20131:47"
+      }
+    ]
+  },
+  {
+    "id": "song-40",
+    "title": "24K Magic",
+    "artist": "Bruno Mars",
+    "year": 2016,
+    "category": "R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e3/47/a0/e347a0cc-87ce-5d05-d560-176c7d48f66e/075679904119.jpg/600x600bb.jpg",
+    "funFact": "Bruno Mars channeled '80s Minneapolis funk for this \u2014 Prince would have nodded approvingly.",
+    "audio": "clips/song-40.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 44,
+        "duration": 15,
+        "label": "0:44\u20130:59"
+      },
+      {
+        "start": 116,
+        "duration": 18,
+        "label": "1:56\u20132:14"
+      }
+    ]
+  },
+  {
+    "id": "song-41",
+    "title": "Blame It",
+    "artist": "Jamie Foxx",
+    "year": 2009,
+    "category": "R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/10/20/71/10207118-2aaf-5509-9767-1b87c29654da/mzi.qiyoergh.jpg/600x600bb.jpg",
+    "funFact": "Jamie Foxx ft. T-Pain \u2014 the auto-tune anthem of every late-2000s party.",
+    "audio": "clips/song-41.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 11,
+        "label": "0:00\u20130:11"
+      },
+      {
+        "start": 41,
+        "duration": 15,
+        "label": "0:41\u20130:56"
+      },
+      {
+        "start": 129,
+        "duration": 19,
+        "label": "2:09\u20132:28"
+      }
+    ]
+  },
+  {
+    "id": "song-42",
+    "title": "Don't Talk",
+    "artist": "Jon B.",
+    "year": 1997,
+    "category": "R&B",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/04/96/8a/04968ac9-2d4e-e541-3426-8444db0d8d1f/mzi.vcvspldv.jpg/600x600bb.jpg",
+    "funFact": "Jon B.'s 1995 quiet-storm jam \u2014 a slow-dance favorite that still fills the floor.",
+    "audio": "clips/song-42.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 58,
+        "duration": 17,
+        "label": "0:58\u20131:15"
+      },
+      {
+        "start": 124,
+        "duration": 18,
+        "label": "2:04\u20132:22"
+      }
+    ]
+  },
+  {
+    "id": "song-43",
+    "title": "Boo Thang",
+    "artist": "Paul Russell",
+    "year": 2022,
+    "category": "R&B",
+    "albumArt": "https://cdn-images.dzcdn.net/images/cover/321f82343ab2722c698d5e15338de6e3/1000x1000-000000-80-0-0.jpg",
+    "funFact": "Paul Russell's 2022 viral hit samples 'Just a Friend' \u2014 old school meets TikTok.",
+    "audio": "clips/song-43.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 5,
+        "label": "0:00\u20130:05"
+      },
+      {
+        "start": 23,
+        "duration": 15,
+        "label": "0:23\u20130:38"
+      },
+      {
+        "start": 46,
+        "duration": 18,
+        "label": "0:46\u20131:04"
+      }
+    ]
+  },
+  {
+    "id": "song-44",
+    "title": "1999",
+    "artist": "Prince",
+    "year": 1982,
+    "category": "PRINCE",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/56/a7/64/56a7645d-4a05-f470-8fcd-5d9d68b7189d/886448877554.jpg/600x600bb.jpg",
+    "funFact": "Prince said he wrote this forecasting the end of the world \u2014 party like it's 1999 anyway.",
+    "audio": "clips/song-44.mp3",
+    "hints": [
+      {
+        "start": 3,
+        "duration": 15,
+        "label": "0:03\u20130:18"
+      },
+      {
+        "start": 61,
+        "duration": 15,
+        "label": "1:01\u20131:16"
+      },
+      {
+        "start": 122,
+        "duration": 18,
+        "label": "2:02\u20132:20"
+      }
+    ]
+  },
+  {
+    "id": "song-45",
+    "title": "Little Red Corvette",
+    "artist": "Prince",
+    "year": 1983,
+    "category": "PRINCE",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/67/7c/53/677c53d2-e388-2189-08a6-c2bed5505dc5/886448969815.jpg/600x600bb.jpg",
+    "funFact": "Prince's breakthrough pop hit \u2014 the car is a metaphor, but the riff is real.",
+    "audio": "clips/song-45.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 39,
+        "duration": 8,
+        "label": "0:39\u20130:47"
+      },
+      {
+        "start": 91,
+        "duration": 18,
+        "label": "1:31\u20131:49"
+      }
+    ]
+  },
+  {
+    "id": "song-46",
+    "title": "Controversy",
+    "artist": "Prince",
+    "year": 1981,
+    "category": "PRINCE",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a5/b3/f8/a5b3f8b0-930e-1bdb-1b4c-2706ef7bd1c4/886448914976.jpg/600x600bb.jpg",
+    "funFact": "Prince asked 'Am I black or white, am I straight or gay?' in 1981 \u2014 ahead of everyone.",
+    "audio": "clips/song-46.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 50,
+        "duration": 15,
+        "label": "0:50\u20131:05"
+      },
+      {
+        "start": 161,
+        "duration": 31,
+        "label": "2:41\u20133:12"
+      }
+    ]
+  },
+  {
+    "id": "song-47",
+    "title": "Ruff Ryders' Anthem",
+    "artist": "DMX",
+    "year": 1999,
+    "category": "OLD SKOOL RAP",
+    "albumArt": "https://cdn-images.dzcdn.net/images/cover/0475f49b196030971890efc632288953/1000x1000-000000-80-0-0.jpg",
+    "funFact": "DMX's growl on this Swizz Beatz beat announced a new era of hardcore hip-hop.",
+    "audio": "clips/song-47.mp3",
+    "hints": [
+      {
+        "start": 8,
+        "duration": 11,
+        "label": "0:08\u20130:19"
+      },
+      {
+        "start": 40,
+        "duration": 15,
+        "label": "0:40\u20130:55"
+      },
+      {
+        "start": 89,
+        "duration": 18,
+        "label": "1:29\u20131:47"
+      }
+    ]
+  },
+  {
+    "id": "song-48",
+    "title": "Changes",
+    "artist": "2Pac",
+    "year": 1998,
+    "category": "OLD SKOOL RAP",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/72/00/89/720089d8-c063-a323-e0cc-de921e50b968/00602527051789.rgb.jpg/600x600bb.jpg",
+    "funFact": "2Pac's posthumous hit samples Bruce Hornsby \u2014 a plea for peace that still hits hard.",
+    "audio": "clips/song-48.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 39,
+        "duration": 18,
+        "label": "0:39\u20130:57"
+      },
+      {
+        "start": 148,
+        "duration": 18,
+        "label": "2:28\u20132:46"
+      }
+    ]
+  },
+  {
+    "id": "song-49",
+    "title": "Rock the Bells",
+    "artist": "LL Cool J",
+    "year": 1985,
+    "category": "OLD SKOOL RAP",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/c2/1d/87/c21d87f3-d2c0-2a26-b7ff-78fb7e53d4d1/06UMGIM18751.rgb.jpg/600x600bb.jpg",
+    "funFact": "LL Cool J was 16 when he recorded this \u2014 Rick Rubin produced his debut album in his dorm.",
+    "audio": "clips/song-49.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 10,
+        "label": "0:00\u20130:10"
+      },
+      {
+        "start": 50,
+        "duration": 15,
+        "label": "0:50\u20131:05"
+      },
+      {
+        "start": 197,
+        "duration": 18,
+        "label": "3:17\u20133:35"
+      }
+    ]
+  },
+  {
+    "id": "song-50",
+    "title": "Push It",
+    "artist": "Salt-N-Pepa",
+    "year": 1987,
+    "category": "OLD SKOOL RAP",
+    "albumArt": "https://cdn-images.dzcdn.net/images/cover/2e411497621e7463b9b6d28447b010f6/1000x1000-000000-80-0-0.jpg",
+    "funFact": "Salt-N-Pepa's 1987 crossover \u2014 'Push it real good' became an instant call-and-response.",
+    "audio": "clips/song-50.mp3",
+    "hints": [
+      {
+        "start": 15,
+        "duration": 10,
+        "label": "0:15\u20130:25"
+      },
+      {
+        "start": 38,
+        "duration": 15,
+        "label": "0:38\u20130:53"
+      },
+      {
+        "start": 126,
+        "duration": 18,
+        "label": "2:06\u20132:24"
+      }
+    ]
+  },
+  {
+    "id": "song-51",
+    "title": "Walk This Way",
+    "artist": "Run-D.M.C.",
+    "year": 1986,
+    "category": "OLD SKOOL RAP",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/da/76/21/da762101-ee6b-d3b5-954e-9dab4c16c45a/078221640824.jpg/600x600bb.jpg",
+    "funFact": "Run-D.M.C. and Aerosmith's 1986 mashup broke hip-hop into mainstream radio.",
+    "audio": "clips/song-51.mp3",
+    "hints": [
+      {
+        "start": 6,
+        "duration": 15,
+        "label": "instrumental groove"
+      },
+      {
+        "start": 53,
+        "duration": 15,
+        "label": "0:53\u20131:08"
+      },
+      {
+        "start": 162,
+        "duration": 20,
+        "label": "2:42\u20133:02"
+      }
+    ]
+  },
+  {
+    "id": "song-52",
+    "title": "Don't Believe the Hype",
+    "artist": "Public Enemy",
+    "year": 1988,
+    "category": "OLD SKOOL RAP",
+    "albumArt": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9f/49/d0/9f49d09b-6842-081e-8cec-67b19a686397/06UMGIM18700.rgb.jpg/600x600bb.jpg",
+    "funFact": "Public Enemy's Chuck D called out the media \u2014 still one of rap's greatest slogans.",
+    "audio": "clips/song-52.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 15,
+        "label": "intro"
+      },
+      {
+        "start": 96,
+        "duration": 14,
+        "label": "1:36\u20131:50"
+      },
+      {
+        "start": 225,
+        "duration": 18,
+        "label": "3:45\u20134:03"
+      }
+    ]
+  },
+  {
+    "id": "song-53",
+    "title": "Summertime",
+    "artist": "DJ Jazzy Jeff & The Fresh Prince",
+    "year": 1991,
+    "category": "OLD SKOOL RAP",
+    "albumArt": "https://cdn-images.dzcdn.net/images/cover/e06e37cd6c0b10dde07ff71b4a95fc2a/1000x1000-000000-80-0-0.jpg",
+    "funFact": "DJ Jazzy Jeff & The Fresh Prince won the first rap Grammy for this 1991 cookout classic.",
+    "audio": "clips/song-53.mp3",
+    "hints": [
+      {
+        "start": 2,
+        "duration": 15,
+        "label": "0:02\u20130:17"
+      },
+      {
+        "start": 28,
+        "duration": 15,
+        "label": "0:28\u20130:43"
+      },
+      {
+        "start": 113,
+        "duration": 19,
+        "label": "1:53\u20132:12"
+      }
+    ]
+  },
+  {
+    "id": "song-54",
+    "title": "Blow the Whistle",
+    "artist": "Too $hort",
+    "year": 2006,
+    "category": "OLD SKOOL RAP",
+    "albumArt": "https://cdn-images.dzcdn.net/images/cover/544d5fca43249ab6ddb352199452f9c1/1000x1000-000000-80-0-0.jpg",
+    "funFact": "Too $hort's Bay Area anthem \u2014 the whistle sound is iconic at every function.",
+    "audio": "clips/song-54.mp3",
+    "hints": [
+      {
+        "start": 0,
+        "duration": 10,
+        "label": "0:00\u20130:10"
+      },
+      {
+        "start": 67,
+        "duration": 15,
+        "label": "1:07\u20131:22"
+      },
+      {
+        "start": 90,
+        "duration": 18,
+        "label": "1:30\u20131:48"
+      }
+    ]
+  },
+  {
+    "id": "song-55",
+    "title": "Hot in Herre",
+    "artist": "Nelly",
+    "year": 2002,
+    "category": "OLD SKOOL RAP",
+    "albumArt": "https://cdn-images.dzcdn.net/images/cover/632fa55096ecab62a0c2556fa9e958c1/1000x1000-000000-80-0-0.jpg",
+    "funFact": "Nelly's 2002 party starter \u2014 'take off all your clothes' was the directive, and crowds obeyed.",
+    "audio": "clips/song-55.mp3",
+    "hints": [
+      {
+        "start": 2,
+        "duration": 5,
+        "label": "0:02\u20130:07"
+      },
+      {
+        "start": 54,
+        "duration": 15,
+        "label": "0:54\u20131:09"
+      },
+      {
+        "start": 187,
+        "duration": 19,
+        "label": "3:07\u20133:26"
+      }
+    ]
+  }
+]
