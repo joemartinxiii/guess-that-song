@@ -182,7 +182,7 @@ async function toggleFullSong() {
   const token = ++fullSongToken;
   updateFullSongButton(true);
   try {
-    await hintPlayer.unlockAudioSession();
+    await hintPlayer.primeIOSAudio();
     await hintPlayer.playFrom(currentSong.audio, 0);
   } catch {
     showToast("Could not play the full song.", true);
@@ -259,7 +259,7 @@ async function playHint(index) {
   updateHintButtons();
 
   try {
-    await hintPlayer.unlockAudioSession();
+    await hintPlayer.primeIOSAudio();
     await hintPlayer.playHint(currentSong, index);
     deckState.roundState.hintsPlayed[index] = true;
     persist();

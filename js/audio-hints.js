@@ -3,21 +3,15 @@
 const DEFAULT_HINT_DURATION = 10;
 const HINT_DURATIONS = [15, 15, 12];
 
-/** Tiny silent MP3 — unlocks iOS speaker routing when played on user gesture. */
-const SILENT_MP3 =
-  "data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4LjQ1LjEwMAAAAAAAAAAAAAAA//tQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAADhAC7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7//////////////////////////////////////////////////////////////////8AAAAATGF2YzU4LjY1AAAAAAAAAAAAAAAAJAAAAAAAAAAAA4T/hBrqAAAAAAD/+1DEAAAHAAGf9AAAIAAANIAAAAQAAAaAAAA";
-
 export function configureAudioSession() {
   try {
     if ("audioSession" in navigator) {
       navigator.audioSession.type = "playback";
     }
   } catch {
-    // Non-fatal — older browsers ignore this.
+    // Ignore — not supported on all browsers.
   }
 }
-
-configureAudioSession();
 
 function isIOS() {
   return (
@@ -25,8 +19,6 @@ function isIOS() {
     (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
   );
 }
-
-const preferMediaElement = isIOS();
 
 export function usesSegmentHints(song) {
   return Boolean(song.audio && Array.isArray(song.hints) && song.hints.length >= 3);
@@ -63,69 +55,18 @@ export function createHintPlayer(audioEl, options = {}) {
   let playing = false;
   let progressRaf = null;
   let inflight = new Map();
-  let iosUnlocked = false;
   let mediaSegmentEnd = null;
+  let iosPrimed = false;
+  const useMediaElement = isIOS();
 
-  async function unlockAudioSession() {
-    if (iosUnlocked) return;
+  async function primeIOSAudio() {
+    if (!useMediaElement || iosPrimed) return;
     configureAudioSession();
-
-    const tasks = [];
-
     if (audioEl) {
       audioEl.setAttribute("playsinline", "");
       audioEl.setAttribute("webkit-playsinline", "");
-      tasks.push(
-        (async () => {
-          const prev = audioEl.src;
-          const prevTime = audioEl.currentTime;
-          audioEl.src = SILENT_MP3;
-          try {
-            await audioEl.play();
-            audioEl.pause();
-          } catch {
-            // Ignore — best-effort unlock.
-          }
-          if (prev) {
-            audioEl.src = prev;
-            audioEl.currentTime = prevTime;
-          } else {
-            audioEl.removeAttribute("src");
-            audioEl.load();
-          }
-        })()
-      );
     }
-
-    tasks.push(
-      (async () => {
-        const silent = new Audio(SILENT_MP3);
-        silent.volume = 0.01;
-        try {
-          await silent.play();
-          silent.pause();
-        } catch {
-          // Ignore.
-        }
-      })()
-    );
-
-    tasks.push(
-      (async () => {
-        const ctx = getContext();
-        if (ctx.state === "suspended") {
-          await ctx.resume();
-        }
-        const buffer = ctx.createBuffer(1, 1, 22050);
-        const source = ctx.createBufferSource();
-        source.buffer = buffer;
-        source.connect(getOutputNode(ctx));
-        source.start(0);
-      })()
-    );
-
-    await Promise.all(tasks);
-    iosUnlocked = true;
+    iosPrimed = true;
   }
 
   function resolveSrc(src) {
@@ -155,7 +96,6 @@ export function createHintPlayer(audioEl, options = {}) {
       activeBufferSource.disconnect();
       activeBufferSource = null;
     }
-    playing = false;
   }
 
   function getContext() {
@@ -181,7 +121,7 @@ export function createHintPlayer(audioEl, options = {}) {
     if (inflight.has(url)) return inflight.get(url);
 
     const task = (async () => {
-      const response = await fetch(src);
+      const response = await fetch(url);
       if (!response.ok) {
         throw new Error(`Failed to load audio (${response.status})`);
       }
@@ -202,6 +142,9 @@ export function createHintPlayer(audioEl, options = {}) {
 
   async function preload(src) {
     if (!src) return null;
+    if (useMediaElement) {
+      return ensureMediaSource(src);
+    }
     return loadBuffer(src);
   }
 
@@ -211,6 +154,9 @@ export function createHintPlayer(audioEl, options = {}) {
   }
 
   function hasBuffer(src) {
+    if (useMediaElement) {
+      return sameSource(src) && audioEl.readyState >= 1;
+    }
     return bufferCache.has(resolveSrc(src));
   }
 
@@ -245,9 +191,11 @@ export function createHintPlayer(audioEl, options = {}) {
       };
       const cleanup = () => {
         audioEl.removeEventListener("loadedmetadata", onReady);
+        audioEl.removeEventListener("canplay", onReady);
         audioEl.removeEventListener("error", onErr);
       };
       audioEl.addEventListener("loadedmetadata", onReady);
+      audioEl.addEventListener("canplay", onReady);
       audioEl.addEventListener("error", onErr);
     });
   }
@@ -264,14 +212,14 @@ export function createHintPlayer(audioEl, options = {}) {
       };
       audioEl.addEventListener("seeked", done);
       audioEl.currentTime = time;
-      setTimeout(done, 250);
+      setTimeout(done, 300);
     });
   }
 
   async function playSegmentWithMediaElement(src, start, duration) {
     stopBufferSource();
     clearSegment();
-    await unlockAudioSession();
+    await primeIOSAudio();
     await ensureMediaSource(src);
 
     const safeStart = Math.max(0, start);
@@ -326,8 +274,6 @@ export function createHintPlayer(audioEl, options = {}) {
     stopBufferSource();
     audioEl.pause();
 
-    await unlockAudioSession();
-
     const ctx = getContext();
     if (ctx.state === "suspended") {
       await ctx.resume();
@@ -372,6 +318,7 @@ export function createHintPlayer(audioEl, options = {}) {
           options.onSegmentEnd(safeStart + safeDuration, safeStart, safeDuration);
         }
         stopBufferSource();
+        playing = false;
         resolve();
       };
 
@@ -381,7 +328,7 @@ export function createHintPlayer(audioEl, options = {}) {
   }
 
   async function playSegment(src, start, duration) {
-    if (preferMediaElement) {
+    if (useMediaElement) {
       return playSegmentWithMediaElement(src, start, duration);
     }
     return playSegmentWithWebAudio(src, start, duration);
@@ -390,9 +337,12 @@ export function createHintPlayer(audioEl, options = {}) {
   async function playFile(src) {
     stopBufferSource();
     clearSegment();
-    await unlockAudioSession();
+    if (useMediaElement) {
+      await primeIOSAudio();
+    }
     if (!sameSource(src)) {
-      audioEl.src = src;
+      audioEl.src = resolveSrc(src);
+      audioEl.load();
     }
     playing = true;
     await audioEl.play();
@@ -408,11 +358,11 @@ export function createHintPlayer(audioEl, options = {}) {
   }
 
   async function previewAt(src, start, duration = 0.35) {
-    return playSegmentWithWebAudio(src, start, duration);
+    return playSegment(src, start, duration);
   }
 
   async function playFrom(src, start) {
-    return playSegmentWithWebAudio(src, start, null);
+    return playSegment(src, start, null);
   }
 
   async function playHint(song, index) {
@@ -449,7 +399,7 @@ export function createHintPlayer(audioEl, options = {}) {
       return true;
     }
 
-    if (preferMediaElement && playing && sameSource(spec.src)) {
+    if (useMediaElement && playing && sameSource(spec.src)) {
       const t = audioEl.currentTime;
       return t >= spec.start && t < spec.start + spec.duration + 0.25;
     }
@@ -472,6 +422,6 @@ export function createHintPlayer(audioEl, options = {}) {
     hasBuffer,
     previewAt,
     playFrom,
-    unlockAudioSession,
+    primeIOSAudio,
   };
 }
