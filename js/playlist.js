@@ -1,5 +1,9 @@
-export async function loadPlaylist() {
-  const response = await fetch("playlist.json");
+export async function loadPlaylist(options = {}) {
+  const url =
+    typeof options === "string"
+      ? options
+      : options.url ?? "playlist.json";
+  const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`Failed to load playlist (${response.status})`);
   }

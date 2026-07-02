@@ -1,5 +1,13 @@
-import { loadPlaylist } from "./playlist.js";
-import { createHintPlayer } from "./audio-hints.js";
+import { loadPlaylist } from "../../js/playlist.js";
+import { createHintPlayer } from "../../js/audio-hints.js";
+
+const GAME_ROOT = new URL("../../", import.meta.url);
+const PLAYLIST_URL = new URL("playlist.json", GAME_ROOT).href;
+
+function withGameAssets(song) {
+  if (!song?.audio || /^https?:\/\//.test(song.audio)) return song;
+  return { ...song, audio: new URL(song.audio, GAME_ROOT).href };
+}
 
 const HINT_COLORS = [
   { fill: "rgba(255, 193, 7, 0.32)", edge: "rgba(255, 193, 7, 0.95)" },
@@ -455,7 +463,7 @@ async function saveHints({ goNext = false } = {}) {
     if (!response.ok) {
       if (response.status === 501 || response.status === 404) {
         throw new Error(
-          "Save needs hint-tuner-server.py — stop python3 -m http.server, then run: python3 scripts/hint-tuner-server.py"
+          "Save needs addons/hint-tuner/server.py — stop python3 -m http.server, then run: python3 addons/hint-tuner/server.py"
         );
       }
       throw new Error(data.error || `Save failed (${response.status})`);
@@ -570,7 +578,7 @@ function bindEvents() {
 
 async function init() {
   try {
-    playlist = await loadPlaylist();
+    playlist = (await loadPlaylist({ url: PLAYLIST_URL })).map(withGameAssets);
     els.songSelect.innerHTML = playlist
       .map(
         (song, index) =>

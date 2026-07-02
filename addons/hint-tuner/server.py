@@ -8,10 +8,11 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import unquote, urlparse
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 PLAYLIST = ROOT / "playlist.json"
 HINTS_PY = ROOT / "scripts" / "song-hints-data.py"
 PORT = 8080
+TUNER_PATH = "/addons/hint-tuner/"
 
 
 def patch_hints_py(title, hints):
@@ -137,7 +138,7 @@ class HintTunerHandler(SimpleHTTPRequestHandler):
 def main():
     port = int(sys.argv[1]) if len(sys.argv) > 1 else PORT
     server = ThreadingHTTPServer(("127.0.0.1", port), HintTunerHandler)
-    print(f"Hint tuner server at http://127.0.0.1:{port}/hint-tuner.html")
+    print(f"Hint tuner server at http://127.0.0.1:{port}{TUNER_PATH}")
     print("Press Ctrl+C to stop.")
     try:
         server.serve_forever()

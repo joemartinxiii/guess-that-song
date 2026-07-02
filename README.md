@@ -131,6 +131,23 @@ Push to GitHub or re-upload to Netlify. Progress is stored in the browser (`loca
 
 **New game** reshuffles everything and clears saved progress (with confirmation).
 
+## Add-ons (dev tools)
+
+Optional tools in [`addons/`](addons/) for playlist maintenance. Not shown in the party game.
+
+### Hint tuner
+
+Each song uses one full MP3; hints are **time ranges** in `playlist.json`. The hint tuner is a waveform editor for finding those ranges by ear.
+
+```bash
+python3 addons/hint-tuner/server.py
+# → http://127.0.0.1:8080/addons/hint-tuner/
+```
+
+**What it does:** drag hint regions on the waveform, preview with 1/2/3, save to `playlist.json` and `scripts/song-hints-data.py`.
+
+**Docs:** [`addons/hint-tuner/README.md`](addons/hint-tuner/README.md)
+
 ## Project structure
 
 ```
@@ -142,6 +159,8 @@ music.game/
     app.js            # Game UI and audio
     deck.js           # Shuffle and localStorage
     playlist.js       # Load and validate playlist
+  addons/
+    hint-tuner/       # Dev tool: tune hint timestamps (optional)
   clips/              # One full MP3 per song (song-01.mp3, …)
   art/                # Album art images
 ```

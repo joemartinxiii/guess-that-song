@@ -6,6 +6,22 @@
   margin-bottom: 1rem;
 }
 
+.tuner-about {
+  margin: 0 0 0.75rem;
+  max-width: 42rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.tuner-about code {
+  font-size: 0.85em;
+}
+
+.tuner-about a {
+  color: var(--blue-light);
+}
+
 .tuner-server-warn {
   margin: 0 0 0.75rem;
   padding: 0.75rem 1rem;

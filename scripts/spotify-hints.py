@@ -3,7 +3,7 @@
 Fetch hint timestamps from Spotify Audio Analysis (sections/segments).
 
 NOTE: Spotify deprecated /audio-analysis for new apps in Nov 2024 (403 for new
-Client IDs). This script is kept for reference only — use hint-tuner.html instead.
+Client IDs). This script is kept for reference only — use addons/hint-tuner/ instead.
 
 Requires a Spotify Developer app (free):
   https://developer.spotify.com/dashboard
@@ -433,7 +433,7 @@ def main():
     apply_playlist(playlist, updates_by_id)
     patch_all_hints_py(hints_by_title)
     print(f"\nWrote playlist.json + song-hints-data.py ({len(updates_by_id)} songs)")
-    print("Spot-check a few in the game, then use hint-tuner.html for fixes.")
+    print("Spot-check a few in the game, then use addons/hint-tuner/ for fixes.")
     return 0
 
 
