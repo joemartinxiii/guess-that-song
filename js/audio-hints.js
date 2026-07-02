@@ -3,6 +3,31 @@
 const DEFAULT_HINT_DURATION = 10;
 const HINT_DURATIONS = [15, 15, 12];
 
+/** Tiny silent MP3 — unlocks iOS speaker routing when played on user gesture. */
+const SILENT_MP3 =
+  "data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4LjQ1LjEwMAAAAAAAAAAAAAAA//tQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAADhAC7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7//////////////////////////////////////////////////////////////////8AAAAATGF2YzU4LjY1AAAAAAAAAAAAAAAAJAAAAAAAAAAAA4T/hBrqAAAAAAD/+1DEAAAHAAGf9AAAIAAANIAAAAQAAAaAAAA";
+
+export function configureAudioSession() {
+  try {
+    if ("audioSession" in navigator) {
+      navigator.audioSession.type = "playback";
+    }
+  } catch {
+    // Non-fatal — older browsers ignore this.
+  }
+}
+
+configureAudioSession();
+
+function isIOS() {
+  return (
+    /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
+  );
+}
+
+const preferMediaElement = isIOS();
+
 export function usesSegmentHints(song) {
   return Boolean(song.audio && Array.isArray(song.hints) && song.hints.length >= 3);
 }
@@ -38,6 +63,70 @@ export function createHintPlayer(audioEl, options = {}) {
   let playing = false;
   let progressRaf = null;
   let inflight = new Map();
+  let iosUnlocked = false;
+  let mediaSegmentEnd = null;
+
+  async function unlockAudioSession() {
+    if (iosUnlocked) return;
+    configureAudioSession();
+
+    const tasks = [];
+
+    if (audioEl) {
+      audioEl.setAttribute("playsinline", "");
+      audioEl.setAttribute("webkit-playsinline", "");
+      tasks.push(
+        (async () => {
+          const prev = audioEl.src;
+          const prevTime = audioEl.currentTime;
+          audioEl.src = SILENT_MP3;
+          try {
+            await audioEl.play();
+            audioEl.pause();
+          } catch {
+            // Ignore — best-effort unlock.
+          }
+          if (prev) {
+            audioEl.src = prev;
+            audioEl.currentTime = prevTime;
+          } else {
+            audioEl.removeAttribute("src");
+            audioEl.load();
+          }
+        })()
+      );
+    }
+
+    tasks.push(
+      (async () => {
+        const silent = new Audio(SILENT_MP3);
+        silent.volume = 0.01;
+        try {
+          await silent.play();
+          silent.pause();
+        } catch {
+          // Ignore.
+        }
+      })()
+    );
+
+    tasks.push(
+      (async () => {
+        const ctx = getContext();
+        if (ctx.state === "suspended") {
+          await ctx.resume();
+        }
+        const buffer = ctx.createBuffer(1, 1, 22050);
+        const source = ctx.createBufferSource();
+        source.buffer = buffer;
+        source.connect(getOutputNode(ctx));
+        source.start(0);
+      })()
+    );
+
+    await Promise.all(tasks);
+    iosUnlocked = true;
+  }
 
   function resolveSrc(src) {
     return new URL(src, window.location.href).href;
@@ -136,9 +225,108 @@ export function createHintPlayer(audioEl, options = {}) {
     }
   }
 
+  async function ensureMediaSource(src) {
+    const url = resolveSrc(src);
+    if (!sameSource(src)) {
+      audioEl.src = url;
+      audioEl.load();
+    }
+
+    if (audioEl.readyState >= 1) return;
+
+    await new Promise((resolve, reject) => {
+      const onReady = () => {
+        cleanup();
+        resolve();
+      };
+      const onErr = () => {
+        cleanup();
+        reject(new Error("Failed to load audio"));
+      };
+      const cleanup = () => {
+        audioEl.removeEventListener("loadedmetadata", onReady);
+        audioEl.removeEventListener("error", onErr);
+      };
+      audioEl.addEventListener("loadedmetadata", onReady);
+      audioEl.addEventListener("error", onErr);
+    });
+  }
+
+  async function seekMedia(time) {
+    if (Math.abs(audioEl.currentTime - time) < 0.05) return;
+    await new Promise((resolve) => {
+      let settled = false;
+      const done = () => {
+        if (settled) return;
+        settled = true;
+        audioEl.removeEventListener("seeked", done);
+        resolve();
+      };
+      audioEl.addEventListener("seeked", done);
+      audioEl.currentTime = time;
+      setTimeout(done, 250);
+    });
+  }
+
+  async function playSegmentWithMediaElement(src, start, duration) {
+    stopBufferSource();
+    clearSegment();
+    await unlockAudioSession();
+    await ensureMediaSource(src);
+
+    const safeStart = Math.max(0, start);
+    await seekMedia(safeStart);
+    await audioEl.play();
+
+    playing = true;
+    mediaSegmentEnd = duration == null ? null : safeStart + duration;
+
+    const onProgress = options.onSegmentProgress;
+    if (onProgress) {
+      const tick = () => {
+        if (!playing || audioEl.paused) return;
+        const end = mediaSegmentEnd ?? audioEl.duration;
+        onProgress(audioEl.currentTime, safeStart, end - safeStart);
+        progressRaf = requestAnimationFrame(tick);
+      };
+      onProgress(safeStart, safeStart, (mediaSegmentEnd ?? audioEl.duration) - safeStart);
+      progressRaf = requestAnimationFrame(tick);
+    }
+
+    return new Promise((resolve) => {
+      let settled = false;
+      const finish = () => {
+        if (settled) return;
+        settled = true;
+        clearProgressLoop();
+        audioEl.onended = null;
+        if (stopTimer) {
+          clearTimeout(stopTimer);
+          stopTimer = null;
+        }
+        audioEl.pause();
+        playing = false;
+        mediaSegmentEnd = null;
+        if (options.onSegmentEnd) {
+          const end = duration == null ? audioEl.duration : safeStart + duration;
+          options.onSegmentEnd(end, safeStart, duration ?? audioEl.duration - safeStart);
+        }
+        resolve();
+      };
+
+      if (duration != null) {
+        stopTimer = setTimeout(finish, duration * 1000 + 100);
+      } else {
+        audioEl.onended = finish;
+      }
+    });
+  }
+
   async function playSegmentWithWebAudio(src, start, duration) {
     stopBufferSource();
     audioEl.pause();
+
+    await unlockAudioSession();
 
     const ctx = getContext();
     if (ctx.state === "suspended") {
@@ -193,12 +381,16 @@ export function createHintPlayer(audioEl, options = {}) {
   }
 
   async function playSegment(src, start, duration) {
+    if (preferMediaElement) {
+      return playSegmentWithMediaElement(src, start, duration);
+    }
     return playSegmentWithWebAudio(src, start, duration);
   }
 
   async function playFile(src) {
     stopBufferSource();
     clearSegment();
+    await unlockAudioSession();
     if (!sameSource(src)) {
       audioEl.src = src;
     }
@@ -209,6 +401,8 @@ export function createHintPlayer(audioEl, options = {}) {
   function stop() {
     stopBufferSource();
     clearSegment();
+    mediaSegmentEnd = null;
+    audioEl.onended = null;
     audioEl.pause();
     playing = false;
   }
@@ -255,6 +449,11 @@ export function createHintPlayer(audioEl, options = {}) {
       return true;
     }
 
+    if (preferMediaElement && playing && sameSource(spec.src)) {
+      const t = audioEl.currentTime;
+      return t >= spec.start && t < spec.start + spec.duration + 0.25;
+    }
+
     return (
       sameSource(spec.src) &&
       audioEl.currentTime >= spec.start &&
@@ -273,5 +472,6 @@ export function createHintPlayer(audioEl, options = {}) {
     hasBuffer,
     previewAt,
     playFrom,
+    unlockAudioSession,
   };
 }
